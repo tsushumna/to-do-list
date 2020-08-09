@@ -1,0 +1,41 @@
+.nvc-pg {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+}
+
+.nvc-pg.active {
+    background-color: #28A4DD;
+    color: white;
+}
+
+// .nvc-pg:hover:not(.active) {background-color: #ddd;}
+.nvc-pg:hover {
+    cursor: pointer;
+}
+
+.nvc-pg a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    border: 1px solid #ddd;
+}
+
+.nvc-pg-active {
+    background-color: #28a4dd;
+    color: white;
+    border: 1px solid #28a4dd;
+}
+
+.nvc-pg a:first-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.nvc-pg a:last-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}

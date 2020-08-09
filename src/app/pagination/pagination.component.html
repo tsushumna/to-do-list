@@ -1,0 +1,7 @@
+<div class="nvc-pg" *ngIf = 'totalcount1 > limit'>
+    <a *ngIf="mainpgarray[pgarray[0]-2]" (click)="showPages('previous')">&laquo;</a>
+    <span *ngFor="let i of pgarray">
+        <a [class.nvc-pg-active]="clicked[i-1]" (click)=pageClicked(i)>{{i}}</a>
+    </span>
+    <a *ngIf="mainpgarray[pgarray[pgarray.length-1]]" (click)="showPages('next')">&raquo;</a>
+</div>

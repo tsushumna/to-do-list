@@ -1,0 +1,13 @@
+<div fxLayout="column" fxLayoutAlign="center center" class="style-height-width width-hundred">
+    <mat-card>
+        <div fxLayout="column" fxLayoutAlign="start center" fxLayoutGap="2em">
+            <div class="input-style border-radius">
+                <input placeholder="Enter Email/Mobile" class="outline-none border-none" [(ngModel)]="email">
+            </div>
+            <div class="input-style border-radius">
+                <input placeholder="Password" class="outline-none border-none" [(ngModel)]="password">
+            </div>
+            <button mat-raised-button class="outline-none border-radius" (click)="login()">Login</button>
+        </div>
+    </mat-card>
+</div>

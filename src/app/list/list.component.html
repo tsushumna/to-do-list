@@ -1,0 +1,23 @@
+<div fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="0.5em" class="width-hundred  margin-top ">
+    <div class="width-hundred" fxLayout="row" fxLayoutAlign="end center">
+        <button class="background-blue color-white" mat-raised-button (click)="create()">Create</button>
+    </div>
+    <div fxLayout="column" fxLayoutAlign="start start" class="width-hundred" fxLayoutGap="0.5em" *ngIf="list && list.length">
+        <div *ngFor="let eachList of list | currentPage : currentPage;let i =index;" class="width-hundred" fxLayout="row" fxLayoutAlign="start center">
+            <div fxFlex="5">
+                <div class="image-style" (click)="onEdit(eachList)">
+                    <img src="../../assets/edit.svg">
+                </div>
+            </div>
+            <div fxFlex="10">
+                {{eachList.title}}
+            </div>
+            <div fxFlex="30">
+                {{eachList.description}}
+            </div>
+            <div fxFlex="5">
+                <img class="image-width" src="../../assets/delete.jpg" (click)="delete(eachList,i)">
+            </div>
+        </div>
+        <app-pagination [totalcount1]="totalCount" (sharedVarChange)="getList($event.pageNumber)"></app-pagination>
+    </div>
